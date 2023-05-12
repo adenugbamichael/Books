@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import { useState } from "react"
-import { FormControl, FormLabel, Input } from "@chakra-ui/react"
 
 const BookCreate = ({ onCreate }) => {
   const [title, setTitle] = useState("")
@@ -9,11 +7,28 @@ const BookCreate = ({ onCreate }) => {
   const handleChange = (event) => {
     setTitle(event.target.value)
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    onCreate(title)
+    setTitle("")
+  }
+
   return (
-    <FormControl>
-      <FormLabel>Title</FormLabel>
-      <Input />
-    </FormControl>
+    <div>
+      <form
+        style={{ display: "flex", flexDirection: "row", gap: "0px" }}
+        onSubmit={handleSubmit}
+      >
+        <label>Title</label>
+        <input
+          style={{ maxWidth: "50vw" }}
+          value={title}
+          onChange={handleChange}
+        />
+        <button style={{ backgroundColor: "teal" }}>Create!</button>
+      </form>
+    </div>
   )
 }
 
