@@ -15,18 +15,12 @@ const BookCreate = ({ onCreate }) => {
   }
 
   return (
-    <div>
-      <form
-        style={{ display: "flex", flexDirection: "row", gap: "0px" }}
-        onSubmit={handleSubmit}
-      >
+    <div className='book-create'>
+      <h3>Add a Book</h3>
+      <form onSubmit={handleSubmit}>
         <label>Title</label>
-        <input
-          style={{ maxWidth: "50vw" }}
-          value={title}
-          onChange={handleChange}
-        />
-        <button style={{ backgroundColor: "teal" }}>Create!</button>
+        <input className='input' value={title} onChange={handleChange} />
+        <button className='button'>Create!</button>
       </form>
     </div>
   )
