@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import BookShow from "./BookShow"
 
-const BookList = ({ books }) => {
+const BookList = ({ books, onDelete }) => {
   const renderedBooks = books.map((book) => {
-    return <BookShow key={book.id} book={book} />
+    return <BookShow onDelete={onDelete} key={book.id} book={book} />
   })
   return <div className='book-list'>{renderedBooks}</div>
 }
