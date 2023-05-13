@@ -1,5 +1,24 @@
-const BookEdit = () => {
-  return <div>BookEdit</div>
+/* eslint-disable react/prop-types */
+import { useState } from "react"
+
+const BookEdit = ({ book }) => {
+  const [title, setTitle] = useState(book.title)
+
+  const handleChange = (event) => {
+    setTitle(event.target.value)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className='book-edit'>
+      <label>Title</label>
+      <input className='input' value={title} onChange={handleChange} />
+      <button className='button is-primary'>Save</button>
+    </form>
+  )
 }
 
 export default BookEdit
