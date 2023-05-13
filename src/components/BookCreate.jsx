@@ -18,9 +18,9 @@ const BookCreate = ({ onCreate }) => {
     <div className='book-create'>
       <h3>Add a Book</h3>
       <form onSubmit={handleSubmit}>
-        <label>Title</label>
+        <label style={{ color: "#EDF2F7" }}>Title</label>
         <input className='input' value={title} onChange={handleChange} />
-        <button className='button'>Create!</button>
+        <button className='button myBtn'>Create!</button>
       </form>
     </div>
   )
