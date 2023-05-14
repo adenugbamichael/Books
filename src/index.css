@@ -10646,7 +10646,7 @@ a.has-text-danger-dark:hover {
 .book-create h3 {
   color: rgba(255, 255, 255, 0.92);
   font-size: 24px;
-  font-weight: 700;
+  font-weight: normal;
 }
 .book-create form {
   align-items: flex-start;
