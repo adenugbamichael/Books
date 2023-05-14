@@ -1,14 +1,10 @@
+/* My Styling */
 @import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
 
 .myBtn {
-  background-color: #2c7a7b !important;
-  border-color: #2c7a7b !important;
- 
-  color: #fff !important;
-}
-.myBtn:hover {
-   background-color: teal !important;
-  border-color: teal !important;
+  background-color: #4a59a5 !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.92) !important;
 }
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 .button,
@@ -336,7 +332,6 @@ h5,
 h6 {
   font-size: 100%;
   font-weight: 400;
-  font-family: "Martel Sans", sans-serif !important;
 }
 ul {
   list-style: none;
@@ -416,7 +411,6 @@ body {
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
-  font-weight: 300;
 }
 a {
   color: #485fc7;
@@ -10643,16 +10637,16 @@ a.has-text-danger-dark:hover {
   padding: 20px;
 }
 .book-create {
-  background-color: #011627;
+  background-color: #4a59a5;
   bottom: 0;
   padding: 20px 40px 30px;
   position: fixed;
   width: 100%;
 }
 .book-create h3 {
-  color: #edf2f7;
-  font-size: 18px;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 24px;
+  font-weight: 700;
 }
 .book-create form {
   align-items: flex-start;
