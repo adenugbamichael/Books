@@ -1,14 +1,6 @@
 {
   "books": [
     {
-      "title": "Brave new world",
-      "id": 1
-    },
-    {
-      "title": "Americanah ",
-      "id": 2
-    },
-    {
       "title": "Things fall apart",
       "id": 3
     }
