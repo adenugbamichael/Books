@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import "./App.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import BookCreate from "./components/BookCreate"
 import BookList from "./components/BookList"
 import axios from "axios"
@@ -14,8 +14,9 @@ const App = () => {
     setBooks(response.data)
   }
 
-  // DONT DO THIS
-  // fetchBooks()
+  useEffect(() => {
+    fetchBooks()
+  }, [])
 
   const editBookById = (id, newTitle) => {
     const updatedBooks = books.map((book) => {
