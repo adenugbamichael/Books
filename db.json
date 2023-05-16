@@ -1,3 +1,12 @@
 {
-  "books": []
+  "books": [
+    {
+      "title": "Brave new world",
+      "id": 1
+    },
+    {
+      "title": "Sapiens: A Brief History of Humankind",
+      "id": 2
+    }
+  ]
 }
