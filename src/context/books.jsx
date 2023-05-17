@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react"
+import { createContext, useState, useCallback } from "react"
 import axios from "axios"
 
 const BooksContext = createContext()
@@ -8,11 +8,11 @@ const BooksContext = createContext()
 const Provider = ({ children }) => {
   const [books, setBooks] = useState([])
 
-  const fetchBooks = async () => {
+  const fetchBooks = useCallback(async () => {
     const response = await axios.get("http://localhost:5175/books")
 
     setBooks(response.data)
-  }
+  }, [])
 
   const editBookById = async (id, newTitle) => {
     const response = await axios.put(`http://localhost:5175/books/${id}`, {
